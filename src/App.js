@@ -10,6 +10,16 @@ function App() {
 
 	const onSubmit = (data) => {
 		console.dir(data);
+		const { username, password } = data;
+		if (username !== 'deleteme' || password !== 'secret') {
+			notifications.showNotification({
+				title: 'Check Username or Password',
+				message:
+					'hello worldhello worldhello worldhello worldhello worldhello worldhello world',
+				icon: <Cross1Icon />,
+				color: 'red',
+			});
+		}
 	};
 
 	const handleNoti = () => {
